@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+    <!-- Works -->
+    <my-checkbox>
+      <template shadowrootmode="open">
+        <label for="checkbox">
+          Checkbox With Content In Shadow Root
+        </label>
+        <input id="checkbox">
+      </template>
+    </my-checkbox>
+
+    <br>
+
+    <!-- Fails -->
+    <my-checkbox>
+      <template shadowrootmode="open">
+        <label for="checkbox">
+          <slot></slot>
+        </label>
+        <input id="checkbox" type="checkbox">
+      </template>
+      Checkbox With Slotted Content
+    </my-checkbox>
+  </body>
+</html>
