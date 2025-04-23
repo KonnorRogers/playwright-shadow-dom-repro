@@ -6,13 +6,13 @@
     <title></title>
   </head>
   <body>
-    <!-- Works -->
+    <!-- Spacing is weird because of how default slots work with empty text nodes. -->
     <my-checkbox>
       <template shadowrootmode="open">
         <label for="checkbox">
           Checkbox With Content In Shadow Root
         </label>
-        <input id="checkbox">
+        <input id="checkbox" type="checkbox">
       </template>
     </my-checkbox>
 
